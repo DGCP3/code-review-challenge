@@ -18,17 +18,20 @@ function App() {
     fetch();
   }, []);
   return (
-    <div className='App'>
+    <div className="App">
       <Page>
         <Navbar />
         <Content>
           <h1>Find a coding hero</h1>
           <h2>Our heroes, your budget!</h2>
           <p>{content1}</p>
-          <div className='card-container'>
+          <div className="card-container">
             {/* TODO: iterate over users */}
             {/* TODO: For each user return <Card /> */}
             {/* TODO: <Card /> should have all its content dynamically from the user data */}
+            {users.map((user) => (
+              <Card key={user.id} user={user} />
+            ))}
           </div>
         </Content>
       </Page>
