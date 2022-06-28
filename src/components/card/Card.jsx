@@ -1,7 +1,7 @@
 import "./card.css";
 
 export const Card = ({ user }) => {
-  const { name, seniority, hourlyRate, avatar, skills, description } = user;
+  const { name, seniority, hourlyRate, avatar, title, tags } = user;
   return (
     <div className="card">
       {/* TODO: repalce hard coded avatar with user's avatar */}
@@ -11,12 +11,12 @@ export const Card = ({ user }) => {
         <h4>User Name</h4>
         {name}
         {/* TODO: replace user job with the user's title */}
-        <p></p>
+        <p>{title}</p>
         {/* TODO: replace SENIORITY with user's seniority */}
         <p>Seniority level: {seniority}</p>
         {/* TODO: replace RATE with user's hourlyRate */}
-        <p>Hourly rate: {}</p>
-        <p>Languages:</p>
+        <p>Hourly rate: {hourlyRate}</p>
+        <p>Languages{[tags].join(",")}:</p>
         {/* TODO: iterate over tags to show all of them */}
         {/* TODO: each tag should have a tag class */}
         <footer>
