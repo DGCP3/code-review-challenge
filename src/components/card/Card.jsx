@@ -16,7 +16,7 @@ export const Card = ({ user }) => {
         <p>Seniority level: {seniority}</p>
         {/* TODO: replace RATE with user's hourlyRate */}
         <p>Hourly rate: {hourlyRate}</p>
-        <p>Languages{[tags].join(",")}:</p>
+        <p>Languages: {[tags].join(",")}:</p>
         {/* TODO: iterate over tags to show all of them */}
         {/* TODO: each tag should have a tag class */}
         <footer>
